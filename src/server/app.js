@@ -4,6 +4,8 @@ import express from "express";
 import ssr from "./middleware/ssr";
 
 import exampleRouter from "./routes/index";
+import { categoryRouter } from "./routes/categories";
+import { notesRouter } from "./routes/notes";
 
 const app = express();
 const CWD = process.cwd();
@@ -12,6 +14,8 @@ const CWD = process.cwd();
 app.use(express.static(path.resolve(CWD, "public/dist/web")));
 
 app.use("/example", exampleRouter);
+
+app.use("/api", categoryRouter, notesRouter);
 
 app.get("/ping", (_req, res) => {
   return res.sendStatus(200);
