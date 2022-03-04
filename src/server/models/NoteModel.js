@@ -7,16 +7,16 @@ const Note = new Schema(
         content: { type: String },
         categoryId: {
             type: Schema.Types.ObjectId,
-            ref: "Category"
+            ref: "categories"
         },
         userId: {
             type: Schema.Types.ObjectId,
-            ref: "User"
+            ref: "users"
         },
     },
     { timestamps: true }
 );
 
-const NotesModel = model("Note", Note, "PHARMACIST_NOTES");
+const NotesModel = model("Note", Note, "notes");
 
 export default NotesModel;
