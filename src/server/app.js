@@ -4,12 +4,9 @@ import express from "express";
 import ssr from "./middleware/ssr";
 import { mongoDBConnect } from "./utils/mongoDB";
 import exampleRouter from "./routes/index";
-<<<<<<< Updated upstream
-import { categoryRouter } from "./routes/categories";
-import { notesRouter } from "./routes/notes";
-=======
+import categoryRouter from "./routes/categories";
+import notesRouter from "./routes/notes";
 import NotesModel from "./models/NotesModel";
->>>>>>> Stashed changes
 
 const app = express();
 const CWD = process.cwd();
@@ -37,11 +34,10 @@ app.get("/notes", async (_req, res) => {
   try {
     console.log("aici!!");
     const notes = await NotesModel.find({});
-    console.log("🚀 ~ file: app.js ~ line 32 ~ app.get ~ notes", notes)
+    console.log("🚀 ~ file: app.js ~ line 32 ~ app.get ~ notes", notes);
     res.send(notes);
   } catch (error) {
-  console.log("🚀 ~ file: app.js ~ line 34 ~ app.get ~ error", error)
-    
+    console.log("🚀 ~ file: app.js ~ line 34 ~ app.get ~ error", error);
   }
 });
 
@@ -64,7 +60,5 @@ app.get(
 </html>`
   )
 );
-
-
 
 export default app;
