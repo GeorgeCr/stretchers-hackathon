@@ -6,7 +6,7 @@ import CategoryModel from "../models/CategoryModel";
 export const createCategory = async (req, res, next) => {
     const { userId, title } = req.body;
     const Category = new CategoryModel({ title, userId });
-    const result = await Category.save((err) => {
+    const result = Category.save((err) => {
         if (err) {
             logger.log({
                 level: "error",
@@ -21,7 +21,7 @@ export const createCategory = async (req, res, next) => {
 
 export const getCategory = async (req, res, next) => {
     const { id } = req.body;
-    const result = await new CategoryModel().findById(id, (err) => {
+    const result = CategoryModel.findById(id, (err) => {
         if (err) {
             logger.log({
                 level: "error",
@@ -36,7 +36,7 @@ export const getCategory = async (req, res, next) => {
 
 export const getCategories = async (req, res, next) => {
     const { userId } = req.body;
-    const result = await new CategoryModel().find({ userId: ObjectId(userId) }, (err) => {
+    const result = CategoryModel.find({ userId: ObjectId(userId) }, (err) => {
         if (err) {
             logger.log({
                 level: "error",
@@ -51,7 +51,7 @@ export const getCategories = async (req, res, next) => {
 
 export const deleteCategory = async (req, res, next) => {
     const { id } = req.body;
-    const result = await new CategoryModel().findById(id, (err) => {
+    const result = CategoryModel.findById(id, (err) => {
         if (err) {
             logger.log({
                 level: "error",

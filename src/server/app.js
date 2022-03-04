@@ -6,13 +6,17 @@ import { mongoDBConnect } from "./utils/mongoDB";
 import exampleRouter from "./routes/index";
 import categoryRouter from "./routes/categories";
 import notesRouter from "./routes/notes";
-import NotesModel from "./models/NotesModel";
+import NotesModel from "./models/NoteModel";
 
 const app = express();
 const CWD = process.cwd();
 
 // eslint-disable-next-line import/no-dynamic-require
 app.use(express.static(path.resolve(CWD, "public/dist/web")));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// app.use(cookieParser());
+app.disable("x-powered-by");
 mongoDBConnect();
 app.use("/example", exampleRouter);
 
