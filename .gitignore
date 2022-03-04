@@ -1,0 +1,7 @@
+.npmrc
+.scannerwork/
+build/
+coverage/
+node_modules/
+public/dist
+deployments/**/*

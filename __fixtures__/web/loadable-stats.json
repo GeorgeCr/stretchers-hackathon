@@ -1,0 +1,89 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.41.2",
+  "hash": "5c1eae7ba132196b036f",
+  "publicPath": "/dist/web/",
+  "outputPath": "",
+  "assetsByChunkName": {
+    "main": ["main.css", "main.js"]
+  },
+  "assets": [
+    {
+      "name": "main.css",
+      "size": 43,
+      "chunks": ["main"],
+      "chunkNames": ["main"],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "main.js",
+      "size": 1202400,
+      "chunks": ["main"],
+      "chunkNames": ["main"],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": ["main"],
+      "assets": ["main.css", "main.js"],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": ["main"],
+      "assets": ["main.css", "main.js"],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/dist/web/",
+      "outputPath": "",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": ["mini-css-extract-plugin"],
+          "assets": ["*"],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": ["mini-css-extract-plugin"],
+          "assets": ["*"],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!src/client/styles/base.css"
+    }
+  ]
+}

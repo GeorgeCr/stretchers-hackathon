@@ -1,0 +1,44 @@
+{
+  "extends": ["boots/express-jest", "boots/react-jest"],
+  "env": {
+    "node": true,
+    "jest": true,
+    "es6": true,
+    "browser": true
+  },
+  "rules": {
+    "node/file-extension-in-import": [
+      "error",
+      "never",
+      {
+        ".scss": "always",
+        ".svg": "always",
+        ".jpg": "always",
+        ".png": "always",
+        ".json": "always"
+      }
+    ],
+    "node/no-missing-import": [
+      "error",
+      {
+        "tryExtensions": [".js", ".json", ".jsx"]
+      }
+    ],
+    "node/no-missing-require": [
+      "error",
+      {
+        "tryExtensions": [".js", ".json", ".jsx"]
+      }
+    ]
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx"],
+    "import/ignore": "node_modules",
+    "import/resolver": {
+      "node": {},
+      "webpack": {
+        "config": "./webpack/app.js"
+      }
+    }
+  }
+}
