@@ -1,1 +1,5 @@
-key: value
+mongoDB:
+  username: stretchers123
+  password: welcomestretchers123
+  dbname: PHARMACIST_NOTES
+  connectionString: mongodb+srv://stretchers123:welcomestretchers123@demo.3j4rq.mongodb.net/PHARMACIST_NOTES?retryWrites=true&w=majority
